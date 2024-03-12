@@ -70,8 +70,8 @@ if(isset($_GET['message2'])){
                         <?php echo $row['dob'] ?>
                     </td>
 
-                    <td><a href="" class="btn btn-success">Update</a></td>
-                    <td><a href="" class="btn btn-danger">Update</a></td>
+                    <td colspan="2"><a href="update.php?update_id=<?php echo $row['id'] ?>" class="btn btn-success">Update</a>
+                    <a href="backend.php?delete_id<?php echo $row['id'] ?>" class="btn btn-danger">Update</a></td>
 
                 </tr>
 

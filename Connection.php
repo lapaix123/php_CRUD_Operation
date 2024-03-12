@@ -18,7 +18,7 @@ ini_set('display_errors', 1);
         die("Connection Failed");
 
     }else{
-        echo"Your connection has been  established !!";
+        // echo"Your connection has been  established !!";
     }
 
 
