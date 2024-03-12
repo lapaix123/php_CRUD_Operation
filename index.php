@@ -12,13 +12,19 @@ include('Connection.php');
         Student</button>
 </div>
 
-<?php 
-if(isset($_GET['message'])){
-    echo"<h6>".$_GET['message']." </h6>";
+<?php
+if (isset($_GET['message'])) {
+    echo "<h6>" . $_GET['message'] . " </h6>";
 }
 
-if(isset($_GET['message2'])){
-    echo"<h5>".$_GET['message2']." </h5>";
+if (isset($_GET['message2'])) {
+    echo "<h5>" . $_GET['message2'] . " </h5>";
+}
+if (isset($_GET['message4'])) {
+    echo "<h6>" . $_GET['message4'] . " </h6>";
+}
+if (isset($_GET['message3'])) {
+    echo "<h5>" . $_GET['message3'] . " </h5>";
 }
 ?>
 
@@ -70,8 +76,10 @@ if(isset($_GET['message2'])){
                         <?php echo $row['dob'] ?>
                     </td>
 
-                    <td colspan="2"><a href="update.php?update_id=<?php echo $row['id'] ?>" class="btn btn-success">Update</a>
-                    <a href="backend.php?delete_id<?php echo $row['id'] ?>" class="btn btn-danger">Update</a></td>
+                    <td colspan="2">
+                        <a href="update.php?id=<?php echo $row['id'] ?>" class="btn btn-success">Update</a>
+                        <a href="backend.php?delete_id=<?php echo $row['id'] ?>" class="btn btn-danger">Delete</a>
+                    </td>
 
                 </tr>
 
@@ -99,27 +107,27 @@ if(isset($_GET['message2'])){
 
                     <div class="form-group">
                         <label> NAMES</label>
-                        <input type="text" class="form-control" placeholder=" Full Names" name="names" >
+                        <input type="text" class="form-control" placeholder=" Full Names" name="names">
 
                     </div>
                     <div class="form-group">
                         <label> Email</label>
-                        <input type="email" class="form-control" placeholder=" Email" name="email" >
+                        <input type="email" class="form-control" placeholder=" Email" name="email">
 
                     </div>
                     <div class="form-group">
                         <label> Phone</label>
-                        <input type="tel" class="form-control" placeholder=" Phone " name="phone" >
+                        <input type="tel" class="form-control" placeholder=" Phone " name="phone">
 
                     </div>
                     <div class="form-group">
                         <label> Address</label>
-                        <input type="text" class="form-control" placeholder=" Address" name="address" >
+                        <input type="text" class="form-control" placeholder=" Address" name="address">
 
                     </div>
                     <div class="form-group">
                         <label> Date Of birth</label>
-                        <input type="date" class="form-control" placeholder=" Address" name="dob" >
+                        <input type="date" class="form-control" placeholder=" Address" name="dob">
 
                     </div>
 
